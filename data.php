@@ -10,10 +10,20 @@ $db_password = "database20"; // Пароль БД
 $db_base = 'innovat5_db'; // Имя БД
 $db_table = "mytable"; // Имя Таблицы БД
 
-// Подключение к базе данных
-$mysqli = new mysqli($db_host, $db_user, $db_password, $db_base);
+    // Подключение к базе данных
+    $mysqli = new mysqli($db_host,$db_user,$db_password,$db_base);
 
-// Если есть ошибка соединения, выводим её и убиваем подключение
-if ($mysqli->connect_error) {
-    die('Ошибка : (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
+    // Если есть ошибка соединения, выводим её и убиваем подключение
+	if ($mysqli->connect_error) {
+	    die('Ошибка : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
+	}
+    
+    $result = $mysqli->query("INSERT INTO ".$db_table." (name,text) VALUES ('$name','$text')");
+    
+    if ($result == true){
+    	echo "Информация занесена в базу данных";
+    }else{
+    	echo "Информация не занесена в базу данных";
+    }
 }
+?>
