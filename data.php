@@ -1,4 +1,6 @@
 <?php
+
+if (isset($_POST['name']) && isset($_POST['text'])){
 // Переменные с формы
 $name = $_POST['name'];
 $text = $_POST['text'];
