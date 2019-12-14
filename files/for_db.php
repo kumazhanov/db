@@ -1,9 +1,10 @@
 <?
+// Параметры для подключения
 $db_host = "srv-pleskdb42.ps.kz:3306";
 $db_user = "innov_user"; // Логин БД  
 $db_password = "database@20"; // Пароль БД
 $db_base = 'innovat5_db'; // Имя БД
-
+// Подключение к базе данных
 $mysqli = new Mysqli($db_host,$db_user,$db_password,$db_base);
 /** Получаем наш ID статьи из запроса */
 $name = trim($_POST['name']);
@@ -14,7 +15,7 @@ $age = intval($_POST['age']);
 if ($name && $surname && $age) {
 	//вставляем запись в БД
 	$query = $mysqli->query("INSERT INTO `users` VALUES(NULL, '$name', '$surname', '$age')");
-	
+
 	//извлекаем все записи из таблицы
 	$query2 = $mysqli->query("SELECT * FROM `users` ORDER BY `id` DESC");
 
@@ -38,7 +39,7 @@ $out = array(
 	'users' => $users
 );
 
-// Устанавливаем заголовот ответа в формате json
+// Устанавливаем заголовоk ответа в формате json
 header('Content-Type: text/json; charset=utf-8');
 
 // Кодируем данные в формат json и отправляем
