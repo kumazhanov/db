@@ -5,9 +5,9 @@ $password = "database@20"; // пароль пользователя (в Denwer`�
 $dbName = "innovat5_db"; // название базы данных
 
 /* Создаем соединение */
-mysql_connect($hostname, $username, $password) or die ("Не могу создать соединение");
-mysql_query('SET NAMES utf8') or header('Location: Error');
+mysqli_connect($hostname, $username, $password) or die ("Не могу создать соединение");
+mysqli_query('SET NAMES utf8') or header('Location: Error');
 
 /* Выбираем базу данных. Если произойдет ошибка - вывести ее */
-mysql_select_db($dbName) or die (mysql_error());
+mysqli_select_db($dbName) or die (mysql_error());
 ?>
