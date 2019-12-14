@@ -31,21 +31,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `name` varchar(50) DEFAULT NULL,
   `surname` varchar(50) DEFAULT NULL,
   `age` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=01 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `surname`, `age`) VALUES
-(47, 'Федор', 'Петров', 50),
-(48, 'Михаил', 'Сергеев', 2345),
-(49, 'Дмитрий', 'Дмитриев', 30),
-(50, 'Ольга', 'Николаева', 25),
-(51, 'Ирина', 'Петрова', 20),
-(52, 'Ольга', 'Орлова', 60),
-(53, 'Дмитрий', 'Орлов', 10),
-(54, 'Иван', 'Иванов', 27);
+(01, 'Федор', 'Петров', 50);
 
 --
 -- Индексы сохранённых таблиц
@@ -65,7 +58,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=01;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -14,9 +14,7 @@ $age = intval($_POST['age']);
 if ($name && $surname && $age) {
 	//вставляем запись в БД
 	$query = $mysqli->query("INSERT INTO `users` VALUES(NULL, '$name', '$surname', '$age')");
-
-
-
+	
 	//извлекаем все записи из таблицы
 	$query2 = $mysqli->query("SELECT * FROM `users` ORDER BY `id` DESC");
 
