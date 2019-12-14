@@ -1,14 +1,5 @@
 <?
-// Параметры для подключения
-$db_host = "srv-pleskdb42.ps.kz:3306";
-$db_user = "innov_user"; // Логин БД  
-$db_password = "database@20"; // Пароль БД
-$db_base = 'innovat5_db'; // Имя БД
-$db_table = "users"; // Имя Таблицы БД
-
-
-
-$mysqli = new Mysqli($db_host,$db_user,$db_password,$db_base);
+$mysqli = new Mysqli('srv-pleskdb42.ps.kz:3306', 'innov_user', 'database@20', 'innovat5_db');
 /** Получаем наш ID статьи из запроса */
 $name = trim($_POST['name']);
 $surname = trim($_POST['surname']);
