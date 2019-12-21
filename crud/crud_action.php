@@ -26,15 +26,12 @@ if(!empty($action)) {
 			}
 			break;			
 		
-		case "delete": 
-			if(!empty($_POST["message_id"])) {
-				$query = "INSERT INTO deleted-comment(`id`, `message`);
-				SELECT `comment`.`id`, `comment`.`message` 
-				FROM `comment`
-				WHERE id=".$_POST["message_id"];
-				"DELETE FROM comment WHERE id=".$_POST["message_id"];
-				$result = $db_handle->execute($query);
-			}
+		 case "delete": 
+		     if(!empty($_POST["message_id"])) {
+		         $query = "DELETE FROM comment WHERE id=".$_POST["message_id"];
+		        $result = $db_handle->execute($query);
+		}
 			break;
 	}
 }
+?>
