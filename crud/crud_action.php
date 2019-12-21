@@ -35,7 +35,7 @@ if(!empty($action)) {
 				FROM
 					`comment` 
 				WHERE 
-					id=".$_POST["message_id"]
+					`comment`.`id`=".$_POST["message_id"]
 				"DELETE FROM comment WHERE id=".$_POST["message_id"];
 
 		        $result = $db_handle->execute($query);
